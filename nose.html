@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-header {
+            color: #007bff;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #d84315;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #bf360c;
+        }
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .skills-table th, .skills-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        .skills-table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .skills-table tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        .skills-table tr:hover {
+            background-color: #bbdefb;
+        }
+        .dynamic-section {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f4c3;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="profile-header">Sebastian Godoy Mayorga</h1>
+        <p><strong>Major:</strong> Civil Industrial Engineering</p>
+        <p><strong>Year of University Enrollment:</strong> 2022</p>
+        <a href="https://github.com/sebastiangodoy03" target="_blank">My GitHub</a>
+        <p>I'm from Puerto Montt and enjoy watching football, especially as a passionate Chelsea fan. I also have an interest in data analysis, programming, and process optimization.</p>
+        
+        <h2>Skills</h2>
+        <table class="skills-table">
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr><td>Python</td><td>Intermediate</td></tr>
+            <tr><td>JavaScript</td><td>Basic</td></tr>
+            <tr><td>HTML/CSS</td><td>Basic</td></tr>
+            <tr><td>Git</td><td>Basic</td></tr>
+            <tr><td>Excel</td><td>Intermediate</td></tr>
+            <tr><td>SQL</td><td>Basic</td></tr>
+            <tr><td>English</td><td>Advanced</td></tr>
+            <tr><td>Spanish</td><td>Native</td></tr>
+        </table>
+        
+        <div class="dynamic-section" id="dynamic-section">
+            <p>This text can be changed!</p>
+        </div>
+        <input type="text" id="input-text" placeholder="Enter new text">
+        <button onclick="updateText()">Update Text</button>
+    </div>
+
+    <script>
+        function updateText() {
+            var newText = document.getElementById("input-text").value.trim();
+            if (newText !== "") {
+                document.getElementById("dynamic-section").innerHTML = "<p>" + newText + "</p>";
+            } else {
+                alert("Please enter some text before updating.");
+            }
+        }
+    </script>
+</body>
+</html>
