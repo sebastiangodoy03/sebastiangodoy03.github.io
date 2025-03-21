@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <div class="container mt-4">
         <div class="row">
             <div class="col-12 text-center">
@@ -129,7 +128,6 @@
 
         function fetchNews() {
             const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2c69473296184b5880d0e353debe9256`;
-
             const xhr = new XMLHttpRequest();
             xhr.open("GET", url, true);
             xhr.onload = function () {
